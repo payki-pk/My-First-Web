@@ -1,27 +1,85 @@
-body{
-    background-color: rgb(53, 141, 153);
-    text-align: center;
-    border: none;
-    justify-content: centre;
-    padding: 20px;
+/* ၁။ တစ်ပြင်လုံး ပုံစံချခြင်း */
+body {
+    margin: 0;
+    font-family: 'Pyidaungsu', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-.card{
-    background-color: rgb(30, 224, 78);
-    text-align: center;
-    border: none;
-    justify-content: centre;
+
+/* ၂။ Card ပုံစံလုပ်ခြင်း */
+.card {
+    background: white;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px;
-    max-width: 300px ;
-    margin: 20px auto ;
-    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
 }
-ul{
+/* ၁။ strong tag ထဲက စာသားတွေကို အရောင်ပြောင်းခြင်း */
+strong {
+    color: #11a016; /* အစိမ်းရောင် ခပ်ရင့်ရင့် */
+    font-weight: 600;
+}
+
+/* ၂။ List (စာရင်း) ထဲက စာသားတွေရဲ့ ကြားအကွာအဝေးကို ညှိခြင်း */
+ul li {
+    list-style-type: none; /* အရှေ့က အမည်းစက် (Bullet points) ကို ဖျောက်ပစ်တာ */
+    margin-bottom: 10px;    /* စာကြောင်း တစ်ကြောင်းနဲ့ တစ်ကြောင်း ကြားကို ခြားတာ */
+    font-size: 1.1rem;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* ဘယ်ညာ အလယ်ညှိခြင်း */
+    align-items: center;     /* အပေါ်အောက် အလယ်ညှိခြင်း */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+
+}
+.profile-img img {
+    width: 150px;       /* ပုံအကျယ် */
+    height: 150px;      /* ပုံအမြင့် */
+    border-radius: 50%; /* ပုံကို အဝိုင်းဖြစ်စေတာ */
+    object-fit: cover;  /* ပုံက ပိန်သွားတာ၊ ပြားသွားတာမျိုး မဖြစ်အောင် ထိန်းတာ */
+    border: 3px solid #4CAF50; /* ပုံဘေးပတ်လည်ကို အစိမ်းရောင် ဘောင်ခတ်တာ */
+    display: block;
+    margin: 0 auto 20px auto; /* ပုံကို အလယ်ပို့ပြီး အောက်ကစာနဲ့ ခြားတာ */
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* ဘောင်နှစ်ထပ် မဖြစ်အောင်လုပ်တာ */
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd; /* အနားသတ်မျဉ်းဖျော့ဖျော့လေး */
+    padding: 12px;           /* စာနဲ့ အနားသတ်ကြား အကွာအဝေး */
     text-align: left;
-    display: inline-block;
-    padding-left: 20px;
 }
-p{
-    text-align: justify;
+
+th {
+    background-color: #4CAF50; /* ခေါင်းစဉ်ကို အစိမ်းရောင်လုပ်တာ */
+    color: white;              /* စာလုံးအရောင် အဖြူ */
+}
+/* Card ကို အချိုးကျဖြစ်အောင် ညှိခြင်း */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 800px; /* အကျယ်ဆုံး 800px ပဲ ရှိမယ် */
+    width: 90%;      /* Screen ရဲ့ 90% ပဲ ယူမယ် (ဘေးမှာ နေရာလွတ်လေး ကျန်အောင်) */
+    margin: 20px;
+}
+
+/* ဇယား (Table) ကို ဖုန်းမှာကြည့်ရင် scroll ဆွဲလို့ရအောင်လုပ်ခြင်း */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto; /* စာတွေများရင် ဘေးတိုက် scroll ဆွဲလို့ရမယ် */
+    }
 }
